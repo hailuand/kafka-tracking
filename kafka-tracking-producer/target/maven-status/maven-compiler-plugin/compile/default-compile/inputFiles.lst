@@ -1,9 +1,1 @@
-/Users/andreashailu/Desktop/kafka-tracking/kafka-tracking-producer/src/main/java/com/pluralsight/kafka/producer/enums/DesignType.java
-/Users/andreashailu/Desktop/kafka-tracking/kafka-tracking-producer/src/main/java/com/pluralsight/kafka/producer/enums/ProductType.java
-/Users/andreashailu/Desktop/kafka-tracking/kafka-tracking-producer/src/main/java/com/pluralsight/kafka/producer/model/InternalUser.java
-/Users/andreashailu/Desktop/kafka-tracking/kafka-tracking-producer/src/main/java/com/pluralsight/kafka/producer/model/Event.java
-/Users/andreashailu/Desktop/kafka-tracking/kafka-tracking-producer/src/main/java/com/pluralsight/kafka/producer/enums/Colors.java
-/Users/andreashailu/Desktop/kafka-tracking/kafka-tracking-producer/src/main/java/com/pluralsight/kafka/producer/model/InternalProduct.java
-/Users/andreashailu/Desktop/kafka-tracking/kafka-tracking-producer/src/main/java/com/pluralsight/kafka/producer/enums/UserId.java
-/Users/andreashailu/Desktop/kafka-tracking/kafka-tracking-producer/src/main/java/com/pluralsight/kafka/producer/EventGenerator.java
 /Users/andreashailu/Desktop/kafka-tracking/kafka-tracking-producer/src/main/java/com/pluralsight/kafka/producer/Main.java

@@ -15,6 +15,8 @@ import java.util.Properties;
 
 @Slf4j
 public class FraudDetectionApp {
+    public static final String PAYMENTS_TOPIC = "payments";
+
     public static void main(String[] args) {
         Properties props = new Properties();
         props.put(StreamsConfig.APPLICATION_ID_CONFIG, "fraud-detection-app");
@@ -24,7 +26,7 @@ public class FraudDetectionApp {
         props.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, "http://localhost:8081");
 
         StreamsBuilder streamsBuilder = new StreamsBuilder();
-        KStream<String, Order> stream = streamsBuilder.stream("payments");
+        KStream<String, Order> stream = streamsBuilder.stream(PAYMENTS_TOPIC);
         // business logic
         stream.peek(FraudDetectionApp::printOnEnter)
                 .filter((txnId, order) -> !order.getUserId().name().equals(""))
@@ -34,9 +36,9 @@ public class FraudDetectionApp {
                 .to("validated-payments");
         Topology topology = streamsBuilder.build();
 
-        try(KafkaStreams streams = new KafkaStreams(topology, props)) {
-            streams.start();
-        }
+        KafkaStreams streams = new KafkaStreams(topology, props);
+        streams.start();
+        Runtime.getRuntime().addShutdownHook(new Thread(streams::close));
     }
 
     private static void printOnEnter(String txnId, Order order) {

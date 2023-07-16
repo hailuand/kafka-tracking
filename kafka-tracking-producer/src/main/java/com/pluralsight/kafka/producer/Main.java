@@ -1,7 +1,8 @@
 package com.pluralsight.kafka.producer;
 
 import com.hailu.kafka.model.*;
-import com.pluralsight.kafka.producer.model.Event;
+import com.hailu.kafka.model.internal.EventGenerator;
+import com.hailu.kafka.model.internal.model.Event;
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.admin.AdminClientConfig;
@@ -15,7 +16,7 @@ import java.util.Properties;
 
 @Slf4j
 public class Main {
-    private static final String TOPIC_NAME = "user-tracking";
+    private static final String TOPIC_NAME = "user-tracking-avro";
 
     public static void main(String[] args) throws InterruptedException {
         EventGenerator eg = new EventGenerator();
@@ -31,7 +32,7 @@ public class Main {
               Event event = eg.generateEvent();
               User key = getKey(event);
               Product value = getValue(event);
-              ProducerRecord<User, Product> producerRecord = new ProducerRecord<>("user-tracking-avro", key, value);
+              ProducerRecord<User, Product> producerRecord = new ProducerRecord<>(TOPIC_NAME, key, value);
               log.info("Publishing record: {}", producerRecord);
 
               producer.send(producerRecord);
