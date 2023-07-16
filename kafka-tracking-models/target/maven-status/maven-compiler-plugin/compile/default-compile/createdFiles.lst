@@ -1,0 +1,10 @@
+com/hailu/kafka/model/Order.class
+com/hailu/kafka/model/Product.class
+com/hailu/kafka/model/Product$Builder.class
+com/hailu/kafka/model/ProductType.class
+com/hailu/kafka/model/User.class
+com/hailu/kafka/model/UserId.class
+com/hailu/kafka/model/User$Builder.class
+com/hailu/kafka/model/Colors.class
+com/hailu/kafka/model/DesignType.class
+com/hailu/kafka/model/Order$Builder.class

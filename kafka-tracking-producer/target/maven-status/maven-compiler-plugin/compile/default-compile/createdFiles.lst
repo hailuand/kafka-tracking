@@ -1,0 +1,15 @@
+com/pluralsight/kafka/producer/model/ImmutableEvent$Builder.class
+com/pluralsight/kafka/producer/enums/ProductType.class
+com/pluralsight/kafka/producer/enums/DesignType.class
+com/pluralsight/kafka/producer/EventGenerator.class
+com/pluralsight/kafka/producer/model/InternalUser.class
+com/pluralsight/kafka/producer/model/ImmutableInternalProduct.class
+com/pluralsight/kafka/producer/model/InternalProduct.class
+com/pluralsight/kafka/producer/Main.class
+com/pluralsight/kafka/producer/model/Event.class
+com/pluralsight/kafka/producer/enums/Colors.class
+com/pluralsight/kafka/producer/model/ImmutableInternalProduct$Builder.class
+com/pluralsight/kafka/producer/model/ImmutableInternalUser.class
+com/pluralsight/kafka/producer/enums/UserId.class
+com/pluralsight/kafka/producer/model/ImmutableEvent.class
+com/pluralsight/kafka/producer/model/ImmutableInternalUser$Builder.class
